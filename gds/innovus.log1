@@ -1,0 +1,306 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.18-s099_1, built Tue Jul 18 13:03:50 PDT 2023
+Options:	-stylus -db postCTSopt/ 
+Date:		Thu Jul 11 12:37:25 2024
+Host:		ip-10-3-90-108 (x86_64 w/Linux 3.10.0-1160.2.2.el7.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Platinum 8175M CPU @ 2.50GHz 33792KB)
+OS:		Red Hat Enterprise Linux Workstation 7.9 (Maipo)
+
+License:
+		[12:37:25.348065] Configured Lic search path (21.01-s002): 5280@af45ls01
+
+		invs	Innovus Implementation System	21.1	Denied
+		invsb	Innovus Implementation System Basic	21.1	Denied
+		fexl	First Encounter XL	21.1	Denied
+		vdixl	Virtuoso Digital Implementation XL	21.1	Denied
+		vdi	Virtuoso Digital Implementation	21.1	checkout succeeded
+		Maximum number of instances allowed (1 x 50000).
+
+
+**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+Create and set the environment variable TMPDIR to /tmp/89.1.normal.q/innovus_temp_18354_ip-10-3-90-108_myanik_11hAwK.
+
+The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+
+**INFO:  MMMC transition support version v31-84 
+
+@innovus 1>  read_db postCTSopt/ 
+#% Begin load design ... (date=07/11 12:37:47, mem=801.7M)
+**WARN: (IMPUDM-33):	Global variable "timing_enable_separate_device_slew_effect_sensitivities" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+**WARN: (IMPUDM-33):	Global variable "timing_enable_separate_device_slew_effect_sensitivities" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+**WARN: (IMPDBTCL-321):	The attribute 'timing_enable_separate_device_slew_effect_sensitivities' still works but will be obsolete in a future major release. You should remove it from your script before the next major release to avoid errors.
+**WARN: (IMPUDM-33):	Global variable "timing_enable_separate_device_slew_effect_sensitivities" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+**WARN: (IMPUDM-33):	Global variable "soceUseIdealDelayForClkInAllMode" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+Loading design 'gpio_controller' saved by 'Innovus' '21.18-s099_1' on 'Thu Jul 11 01:58:35 2024'.
+Reading max_timing timing library '/home/myanik/work/teknofest24/alaz/playground/gpio/lib/slow_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/myanik/work/teknofest24/alaz/playground/gpio/lib/slow_vdd1v0_basicCells.lib)
+Read 480 cells in library 'slow_vdd1v0' 
+Reading min_timing timing library '/home/myanik/work/teknofest24/alaz/playground/gpio/lib/fast_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/myanik/work/teknofest24/alaz/playground/gpio/lib/fast_vdd1v0_basicCells.lib)
+Read 480 cells in library 'fast_vdd1v0' 
+default_mapping_tc_2 default_mapping_tc_1
+rccorners
+
+Loading LEF file /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/libs/lef/gsclib045_tech.lef ...
+
+Loading LEF file /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/libs/lef/gsclib045_macro.lef ...
+Set DBUPerIGU to M2 pitch 400.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/viewDefinition.tcl
+% Begin Load netlist data ... (date=07/11 12:37:49, mem=830.5M)
+*** Begin netlist parsing (mem=958.5M) ***
+Created 480 new cells from 2 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilogBinary netlist '/home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/gpio_controller.v.bin'
+
+*** Memory Usage v#1 (Current mem = 969.469M, initial mem = 464.082M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=969.5M) ***
+% End Load netlist data ... (date=07/11 12:37:49, total cpu=0:00:00.0, real=0:00:00.0, peak res=840.3M, current mem=840.3M)
+Top level cell is gpio_controller.
+Hooked 960 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell gpio_controller ...
+*** Netlist is unique.
+** info: there are 1064 modules.
+** info: there are 92 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1025.941M, initial mem = 464.082M) ***
+*info: set bottom ioPad orient R0
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+Set Shrink Factor to 0.90000
+Loading preference file /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/gui.pref.tcl ...
+Effort level <high> specified for reg2reg path_group
+Slack adjustment of -0 applied on reg2reg path_group
+Slack adjustment of -0 applied on <default> path group
+Effort level <high> specified for tdgp_reg2reg_default path_group
+Slack adjustment of -0 applied on tdgp_reg2reg_default path_group
+add_rings command will ignore shorts while creating rings.
+add_rings command will disallow rings to go over rows.
+add_rings command will consider rows while creating rings.
+The ring targets are set to core/block ring wires.
+add_stripes will allow jog to connect padcore ring and block ring.
+
+Stripes will not extend to closest target.
+When breaking rings, the power planner will consider the existence of blocks.
+add_stripes will break automatically at non-default domains when generating global stripes over the core area or default domain.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+Stripes will not be created over regions without power planning wires.
+Offset for stripe breaking is set to 0.
+Stripes will stop at the boundary of the specified area.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Change floorplan default-technical-site to 'CoreSite'.
+*Info: initialize multi-corner CTS.
+Total number of combinational cells: 318
+Total number of sequential cells: 152
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 CLKBUFX2 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX2 CLKINVX12 CLKINVX16 CLKINVX20 CLKINVX4 CLKINVX3 CLKINVX6 CLKINVX8 INVX1 INVX2 INVX12 INVX16 INVX20 INVXL INVX3 INVX4 INVX6 INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Reading floorplan file - /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/gpio_controller.fp.gz (mem = 1293.4M).
+% Begin Load floorplan data ... (date=07/11 12:37:50, mem=1157.7M)
+*info: reset 194 existing net BottomPreferredLayer and AvoidDetour
+Deleting old partition specification.
+Set FPlanBox to (0 0 68000 61560)
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+ ... processed partition successfully.
+Reading binary special route file /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/gpio_controller.fp.spr.gz (Created by Innovus v21.18-s099_1 on Thu Jul 11 01:58:34 2024, version: 1)
+Convert 0 swires and 0 svias from compressed groups
+32 swires and 154 svias were compressed
+57 swires and 293 svias were decompressed from small or sparse groups
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1160.5M, current mem=1160.5M)
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Delete all existing relative floorplan constraints.
+% End Load floorplan data ... (date=07/11 12:37:50, total cpu=0:00:00.0, real=0:00:00.0, peak res=1160.5M, current mem=1159.4M)
+Reading congestion map file /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/gpio_controller.route.congmap.gz ...
+% Begin Load SymbolTable ... (date=07/11 12:37:50, mem=1159.4M)
+Suppress "**WARN ..." messages.
+Un-suppress "**WARN ..." messages.
+% End Load SymbolTable ... (date=07/11 12:37:51, total cpu=0:00:00.0, real=0:00:01.0, peak res=1159.9M, current mem=1159.9M)
+Loading place ...
+% Begin Load placement data ... (date=07/11 12:37:51, mem=1159.9M)
+Reading placement file - /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/gpio_controller.place.gz.
+** Reading stdCellPlacement_binary (Created by Innovus v21.18-s099_1 on Thu Jul 11 01:58:34 2024, version# 2) ...
+Read Views for adaptive view pruning ...
+Read 0 views from Binary DB for adaptive view pruning
+*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=1295.4M) ***
+Total net length = 5.477e+02 (3.054e+02 2.422e+02) (ext = 2.728e+02)
+% End Load placement data ... (date=07/11 12:37:51, total cpu=0:00:00.0, real=0:00:00.0, peak res=1160.5M, current mem=1160.5M)
+Reading PG file /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/gpio_controller.pg.gz, version#2, (Created by Innovus v21.18-s099_1 on       Thu Jul 11 01:58:34 2024)
+*** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1292.4M) ***
+% Begin Load routing data ... (date=07/11 12:37:51, mem=1160.6M)
+Reading routing file - /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/gpio_controller.route.gz.
+Reading Innovus routing data (Created by Innovus v21.18-s099_1 on Thu Jul 11 01:58:34 2024 Format: 20.1) ...
+*** Total 179 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1292.4M) ***
+% End Load routing data ... (date=07/11 12:37:51, total cpu=0:00:00.0, real=0:00:00.0, peak res=1160.9M, current mem=1160.9M)
+TAT_INFO: restoreCongMap REAL = 1 : CPU = 0 : MEM = 0.
+Reading property file /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/gpio_controller.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1295.4M) ***
+add_rings command will ignore shorts while creating rings.
+add_rings command will disallow rings to go over rows.
+add_rings command will consider rows while creating rings.
+The ring targets are set to core/block ring wires.
+add_stripes will allow jog to connect padcore ring and block ring.
+
+Stripes will not extend to closest target.
+When breaking rings, the power planner will consider the existence of blocks.
+add_stripes will break automatically at non-default domains when generating global stripes over the core area or default domain.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+Stripes will not be created over regions without power planning wires.
+Offset for stripe breaking is set to 0.
+Stripes will stop at the boundary of the specified area.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Change floorplan default-technical-site to 'CoreSite'.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+**WARN: (IMPEXT-6202):	In addition to the technology file, the capacitance table file is specified for all the RC corners. If the technology file  is already specified for all the RC corners, the capacitance table file is not required for pre_route and post_route extraction. In a new session, the capacitance table files can be removed from the create_rc_corner command to enable the technology file to be used for pre_route and post_route (effort level medium/high/signoff) extraction engines.
+Type 'man IMPEXT-6202' for more detail.
+Reading Capacitance Table File /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/libs/mmmc/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl ...
+Cap table was created using Encounter 10.10-b056_1.
+Process name: cln28hpl_1p10m+alrdl_5x2yu2yz_typical.
+Set Shrink Factor to 0.90000
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: wc
+    RC-Corner Name        : rccorners
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '/home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/libs/mmmc/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/libs/mmmc/rccorners/gpdk045.tch'
+ 
+ Analysis View: bc
+    RC-Corner Name        : rccorners
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '/home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/libs/mmmc/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/libs/mmmc/rccorners/gpdk045.tch'
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Creating RPSQ from WeeR and WRes ...
+Loading rc congestion map /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/gpio_controller.congmap.gz ...
+Start generating vias ..
+#Skip building auto via since it is not turned on.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Via generation completed.
+% Begin Load power constraints ... (date=07/11 12:37:51, mem=1172.0M)
+source /home/myanik/work/teknofest24/alaz/playground/gpio/gds/postCTSopt/gpio_controller_power_constraints.tcl
+'set_default_switching_activity' finished successfully.
+% End Load power constraints ... (date=07/11 12:37:51, total cpu=0:00:00.0, real=0:00:00.0, peak res=1178.5M, current mem=1178.5M)
+max_delay min_delay
+% Begin load AAE data ... (date=07/11 12:37:51, mem=1202.2M)
+AAE DB initialization (MEM=1358 CPU=0:00:00.0 REAL=0:00:00.0) 
+% End load AAE data ... (date=07/11 12:37:52, total cpu=0:00:00.6, real=0:00:01.0, peak res=1209.8M, current mem=1209.8M)
+Restoring CCOpt config...
+  Extracting original clock gating for clk...
+    clock_tree clk contains 34 sinks and 0 clock gates.
+  Extracting original clock gating for clk done.
+  The skew group clk/sdc_cons was created. It contains 34 sinks and 1 sources.
+Restoring CCOpt config done.
+Total number of combinational cells: 318
+Total number of sequential cells: 152
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 CLKBUFX2 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX2 CLKINVX12 CLKINVX16 CLKINVX20 CLKINVX4 CLKINVX3 CLKINVX6 CLKINVX8 INVX1 INVX2 INVX12 INVX16 INVX20 INVXL INVX3 INVX4 INVX6 INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version . They will be removed in the next release. 
+timing_enable_separate_device_slew_effect_sensitivities
+#% End load design ... (date=07/11 12:37:52, total cpu=0:00:03.9, real=0:00:05.0, peak res=1233.0M, current mem=1213.8M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+WARNING   IMPDBTCL-321         1  The attribute '%s' still works but will ...
+WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+WARNING   IMPCTE-107           1  The following globals have been obsolete...
+WARNING   IMPUDM-33            4  Global variable "%s" is obsolete and wil...
+WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+*** Message Summary: 14 warning(s), 0 error(s)
+
+@innovus 2> 
+--------------------------------------------------------------------------------
+Exiting Innovus on Thu Jul 11 12:38:16 2024
+  Total CPU time:     0:00:30
+  Total real time:    0:00:52
+  Peak memory (main): 1445.46MB
+
+
+*** Memory Usage v#1 (Current mem = 1660.414M, initial mem = 464.082M) ***
+*** Message Summary: 15 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:28.7, real=0:00:51.0, mem=1660.4M) ---
